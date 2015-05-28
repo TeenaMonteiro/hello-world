@@ -1,2 +1,2 @@
 # hello-world
-Django Project
+A Django Project
