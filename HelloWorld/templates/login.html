@@ -1,0 +1,59 @@
+{% extends "master.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+	 
+
+
+
+{% block body %}
+
+
+	<div class="container" style="background-color: #EDF3F5;margin-top:20px">
+		<table style="border:none;margin-left: 80px;" cellspacing="0" cellpadding="30">
+
+			<tr>
+				<td style="width:45%">
+				<form  action="{% url 'login' %}" method="post" class="form-horizontal"  >
+					{% csrf_token %}
+
+					<table style="border: none;" cellspacing="0" cellpadding="10">
+
+						<tr>
+							<td>
+							<legend style="color:#5E5858;" >
+								Sign In
+							</legend></td>
+						</tr>
+						<tr>
+							<td>{{login_form.username.label}} <span style="color:Red;font-size:medium;">*</span></td>
+							<td>
+							{{login_form.username}}
+							</td>
+
+						</tr>
+						<tr>
+							<td></td>
+
+							<td> {{login_form.username.errors}} </td>
+
+						</tr>
+
+						
+						<tr>
+							<td></td>
+							<td>
+							<input type="submit" value="Sign In" id="submit" class="btn btn-success" name="submit" />
+							</td>
+						</tr>
+
+					</table>
+				</form></td>
+				</tr>
+				
+				</table>
+	
+
+
+{% endblock body %}

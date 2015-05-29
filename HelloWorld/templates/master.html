@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+			<title>{% block title %}{% endblock %}</title>
+		
+  <link rel="stylesheet" href="{{STATIC_URL}}bootstrap/css/bootstrap.css" media="screen">
+        <link rel="stylesheet" href="{{STATIC_URL}}bootstrap/css/bootstrap.min.css" media="screen">
+		<script src="{{STATIC_URL}}bootstrap/js/bootstrap.js" type="text/javascript"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+		
+</head>
+<body>
+	{%block body %}
+	
+		{% block messages %}
+	{% if messages %}
+
+		{% for message in messages %}
+		{% if 'error' in message.tags %}
+		<div class="alert alert-danger" style="width: 90%;margin-left: 20px;">
+			<ul class="messages">
+				<li class="text-error" {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+					<strong>{{ message }}</strong>
+				</li>
+			</ul>
+		</div>
+
+		{% else %}{% if 'success' in message.tags %}
+
+		<div class="alert alert-success" style="width: 90%;margin-left: 20px;">
+			<ul class="messages">
+				<li class="text-error" {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+					<strong>{{ message }}</strong>
+				</li>
+			</ul>
+		</div>
+
+	
+		{% else %}
+
+		<div class="alert alert-information alert-block" style="width: 90%;margin-left: 20px;">
+			<ul class="messages">
+				<li class="text-error" {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+					<strong>{{ message }}</strong>
+				</li>
+			</ul>
+		</div>
+
+	{% endif %}
+		{% endif %}
+		{% endfor %}
+		{% endif %}
+		{% endblock messages %}
+		{% endblock body %}
+	
+	
+	
+	
+	
+</body>
+
+
+
+</html>
