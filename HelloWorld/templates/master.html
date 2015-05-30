@@ -35,16 +35,7 @@
 			</ul>
 		</div>
 
-	
-		{% else %}
 
-		<div class="alert alert-information alert-block" style="width: 90%;margin-left: 20px;">
-			<ul class="messages">
-				<li class="text-error" {% if message.tags %} class="{{ message.tags }}"{% endif %}>
-					<strong>{{ message }}</strong>
-				</li>
-			</ul>
-		</div>
 
 	{% endif %}
 		{% endif %}
