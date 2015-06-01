@@ -8,6 +8,6 @@ setup(
     # metadata for upload to PyPI
     author = "Teena Monteiro",
     author_email = "teena.mon11@gmail.com",
-    description = "This is HelloWorld Package"
+    description = "This is a HelloWorld Package"
     
 )
