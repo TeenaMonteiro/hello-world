@@ -27,6 +27,6 @@ if __name__ == "__main__":
         elif os.name =='posix':
             os.system("sudo python %s %s" %(os.path.join(os.path.dirname(__file__),"dependency.py"),"install"))
     if sys.argv[1] == "help":
-       print """The setup installs the package 'TxSmartQWebPortal' in \var\www incase of Linux OS and C:\\inetpub incase of Windows OS.
+       print """The setup installs the package 'HelloWorld' in \var\www incase of Linux OS and C:\\ incase of Windows OS.
 Also the setup installs the required dependencies to run the project.Use setup.py install command to run the setup"""
     
